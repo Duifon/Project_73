@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лицей №73 - Анимационные инструкции при ЧС</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Инструкции при ЧС</div>
+            <ul class="nav-links">
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#goals">Цели</a></li>
+                <li><a href="#stages">Этапы</a></li>
+                <li><button id="themeToggle">Сменить тему</button></li>
+            </ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Анимированные инструкции при чрезвычайных ситуациях</h1>
+                <p class="subtitle">Визуальное руководство</p>
+                <div class="placeholder-text">Выберите вид ЧС</div>
+                <div class="video-frame">
+                    <div class="video-container" id="videoBox">
+                        <video controls class="emergency-video">
+                            <source src="" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                </div>
+                <div class="scenario-buttons">
+                    <button data-video="example.mp4"> Вооружённое нападение</button>
+                    <button data-video="example.mp4"> Закладка бомбы</button>
+                    <button data-video="example.mp4">Пожар</button>
+                    <button id="resetBtn"> Сбросить</button>
+                </div>
+            </div>
+            <div class="wave-divider"></div>
+        </section>
+        <section class="model-section content-section">
+            <h2>3D-Модель Школы</h2>
+            <div class="model-container" id="modelContainer">
+                <div class="loading-overlay">Загрузка модели...</div>
+            </div>
+        </section>        
+
+        <section id="about" class="content-section">
+            <h2>О проекте</h2>
+            <div class="content-grid">
+                <article class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Актуальность</h3>
+                    <p>Некоторые популярные видео, содержащие список действий при чрезвычайных ситуациях, происходят в помещениях, незнакомых некоторым ученикам. Минуты замешательства могут стоить ребятам жизни. Обучающие ролики, показывающие родную школу, помогут ученикам быстрее сориентироваться в ЧС</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Описание</h3>
+                    <p>Сайт с 3D-анимациями и пошаговыми инструкциями для различных сценариев ЧС</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="goals" class="content-section">
+            <h2>Цели и задачи</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Основная цель</h3>
+                    <p>Моделирование ЧС на примере конкретной школы</p>
+                </div>
+                <div class="card">
+                    <h3>Задачи</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Создание анимационных сценариев ЧС</li>
+                        <li><i class="fas fa-check"></i> Создание 3D-модели школы</li>
+                        <li><i class="fas fa-check"></i> Размещение анимаций ЧС на сайте</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="stages" class="content-section">
+            <h2>Этапы реализации</h2>
+            <div class="timeline">
+                <div class="timeline-item">Сбор данных о планировке школы</div>
+                <div class="timeline-item">Создание 3d - модели школы</div>
+                <div class="timeline-item">Сбор данных о действиях в случае ЧС</div>
+                <div class="timeline-item">Создание анимаций на основе полученных данных</div>
+                <div class="timeline-item">Создание сайта</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Email: fedulaevnicita@yandex.ru.ru</p>
+                <p>Телефон: +7 (927) 095-16-96</p>
+            </div>
+            <div class="footer-section">
+                <h3>Разработчик</h3>
+                <p>Федулаев Н.Е.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/loaders/GLTFLoader.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
